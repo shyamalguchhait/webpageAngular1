@@ -1,0 +1,41 @@
+@import "../../../fonts.scss";
+@import "../../../colors.scss";
+
+.about {
+    color: var(--lightColor);
+    font-family: lato;
+    .text {
+        text-align: center;
+        font-size: xx-large;
+        font-weight: bold;
+        margin: 10px;
+    }
+    .infoFull {
+        display: flex;
+        .pf-img {
+            position: relative;
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            img {
+                width: 100%;
+            }
+            .info {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                .photo {
+                    .name {
+                        color: var(--lightColorName);
+                    }
+                }
+            }
+        }
+        .infoText {
+            font-size: large;
+            margin: 0;
+            padding: 1em;
+        }
+    }
+}

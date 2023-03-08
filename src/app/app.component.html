@@ -1,0 +1,63 @@
+<div class="navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/"><img src="../assets/navbar.png" alt="icon"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/" style="--clr:#ec2019;">Home
+              <span></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link remove" routerLink="/about" style="--clr:#29da19;">About
+              <span></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link remove" routerLink="/research" style="--clr:#ecde19;">Research
+              <span></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link remove" routerLink="/publication" style="--clr:#197bec;">Publication
+              <span></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link remove" routerLink="lightbox" style="--clr:#7b19ec;">Lightbox
+              <span></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="" class="nav-link remove" routerLink="contact" style="--clr:#ec19da;">Contact
+              <span></span>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav me-2">
+          <li class="nav-item">
+            <a class="switch">
+              <input class="toggle" type="checkbox" id="switch" name="mode" />
+              <label for="switch"> Toggle </label>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<!-- <div class="container">
+  <div class="index">
+    <h1>This is my personal webpage</h1>
+    <div class="name">Shymal Guchhait</div>
+    <div class="text">I'm a student of IISER Kolkata.</div>
+  </div>
+</div> -->
+<router-outlet></router-outlet>
+
+<footer>&copy; &#169; &#xA9; copyright 2022, Shyamal Guchhait</footer>

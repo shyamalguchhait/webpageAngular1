@@ -1,0 +1,59 @@
+@import "../../../fonts.scss";
+@import "../../../colors.scss";
+.contact {
+    color: var(--lightColor);
+    .text {
+        text-align: center;
+        font-size: xx-large;
+        font-weight: bold;
+        margin: 10px;
+    }
+    .googleMap {
+        width: 80%;
+        margin: auto;
+        padding: auto;
+        padding-bottom: 30px;
+        iframe {
+            border: 1px solid black;
+        }
+    }
+    .info {
+        width: 80%;
+        margin: auto;
+    }
+    .phone {
+        width: 80%;
+        margin: auto;
+        a {
+            color: var(--lightPhEmail);
+            text-decoration: none;
+            @include hoverUnderline;
+            &:hover {
+                font-weight: bold;
+                font-style: italic;
+            }
+        }
+    }
+    .email {
+        width: 80%;
+        margin: auto;
+        a {
+            color: var(--lightPhEmail);
+            text-decoration: none;
+            @include hoverUnderline;
+            &:hover {
+                font-weight: bold;
+                font-style: italic;
+            }
+        }
+    }
+    .icon-white {
+        color: var(--lightIcon);
+        font-size: 24px;
+        @include hoverUnderline;
+        &:hover {
+            color: var(--lightPhEmail);
+            cursor: pointer;
+        }
+    }
+}

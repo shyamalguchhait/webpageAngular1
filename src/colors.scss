@@ -1,0 +1,42 @@
+:root {
+    background: var(--lightBg);
+    --lightColor: #111;
+    --lightBg: #eee;
+    --lightButton: #040a2c;
+    --lightNavColor: #80002b;
+    --lightNavBg: #ddd;
+    --lightNavHover: purple;
+    --lightIcon: black;
+    --lightPhEmail: #00e;
+    --lightLink: #f00;
+    --lightDarkMode: #00b6e4;
+    --lightFooter: #a1ffb1;
+    --lightFooterBg: red;
+    --lightColorName: #00ffaa;
+}
+
+:root[data-theme="dark"] {
+    background: var(--lightBg);
+    --lightColor: #eee;
+    --lightBg: #111;
+    --lightButton: #fff;
+    --lightNavColor: #7fffd4;
+    --lightNavBg: #222;
+    --lightNavHover: purple;
+    --lightIcon: white;
+    --lightPhEmail: #ee0;
+    --lightLink: #f0f;
+    --lightDarkMode: #ffbd07; //#f0ad4e; #ffa500;
+    --lightFooter: #a1ffb1;
+    --lightFooterBg: red;
+    --lightColorName: #ff0055;
+}
+
+@mixin hoverUnderline {
+    background: linear-gradient(currentColor 0 0) bottom/var(--d, 0) 3px no-repeat;
+    transition: 1s;
+
+    &:hover {
+        --d: 100%;
+    }
+}

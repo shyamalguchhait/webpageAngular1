@@ -1,0 +1,25 @@
+@import "../../../fonts.scss";
+@import "../../../colors.scss";
+$padding: 50px;
+$br: 5px;
+
+.research {
+    color: var(--lightColor);
+    font-family: lato;
+    .text {
+        text-align: center;
+        font-size: xx-large;
+        font-weight: bold;
+        margin: 10px;
+    }
+    .topics {
+        text-align: justify;
+        text-justify: initial;
+        .topic {
+            h6 {
+                text-align: left;
+                font-weight: bold;
+            }
+        }
+    }
+}

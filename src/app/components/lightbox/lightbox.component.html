@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="lightbox">
+    <div class="text">Lightbox</div>
+    <div class="gallery-lightbox-container">
+      <div class="row">
+        <div class="col">
+          <div class="text">Outside</div>
+          <div class="galler">
+            <div *ngFor="let image of albums[0]; let i = index" class="gallery-img">
+              <img [src]="image.src" (click)="open(i)" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="text">IISER</div>
+          <div class="galler">
+            <div *ngFor="let image of albums[1]; let i = index" class="gallery-img">
+              <img [src]="image.src" (click)="open(i + 13)" />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="text">BioNaP Lab</div>
+          <div class="galler">
+            <div *ngFor="let image of albums[4]; let i = index" class="gallery-img">
+              <img [src]="image.src" (click)="open(i + 13 + 2 + 14 + 16)" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="text">Lab team evolution</div>
+          <div class="galler">
+            <div *ngFor="let image of albums[2]; let i = index" class="gallery-img">
+              <img [src]="image.src" (click)="open(i + 13 + 2)" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="text">IISER campus</div>
+          <div class="galler">
+            <div *ngFor="let image of albums[3]; let i = index" class="gallery-img">
+              <img [src]="image.src" (click)="open(i + 13 + 2 + 14)" />
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="text">Outside landscape</div>
+          <div class="galler">
+            <div *ngFor="let image of albums[5]; let i = index" class="gallery-img">
+              <img [src]="image.src" (click)="open(i + 13 + 2 + 14 + 16 + 2)" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

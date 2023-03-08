@@ -1,0 +1,71 @@
+@import "../../../colors.scss";
+@import "../../../fonts.scss";
+
+.lightbox {
+    color: var(--lightColor);
+    $columnCount: 6;
+    $columnWidth: 2in;
+    font-family: lato;
+    z-index: 9;
+    .text {
+        text-align: center;
+        font-size: xx-large;
+        font-weight: bold;
+        margin: 10px;
+    }
+    .gallery-lightbox-container {
+        position: relative;
+        display: inline-block;
+        padding: 25px;
+
+        .row {
+            .col {
+                .text {
+                    font-size: xx-large;
+                }
+            }
+        }
+
+        .galler {
+            border: 0px solid var(--lightColor);
+            margin: 20px;
+            line-height: 0;
+            column-count: $columnCount;
+            column-width: $columnWidth;
+            column-gap: 30px;
+
+            .gallery-img {
+                img {
+                    display: block !important;
+                    width: 100%;
+                    //height: auto;
+                    text-align: center;
+                    margin: auto;
+                    cursor: zoom-in;
+                    border-radius: 0.35rem;
+                    margin-bottom: 30px;
+                    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.21);
+
+                    &:hover {
+                        cursor: progress;
+                        //animation: zoomIn 1s ease;
+                        //animation: swing 1s; //, flip 1s, bounce 1s; //, zoomIn 1s ease;
+                        //-webkit-animation: flip 1s; //, zoomIn 1s ease;
+                        //-webkit-animation: zoomIn 1s ease;
+                        transform: scale(1.5);
+                    }
+                }
+
+                @keyframes zoomIn {
+                    from {
+                        transform: scale(1);
+                    }
+
+                    to {
+                        transform: scale(1.5);
+                    }
+                }
+            }
+        }
+    }
+}

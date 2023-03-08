@@ -1,0 +1,7 @@
+@import "./fonts.scss";
+@import "./colors.scss";
+
+body {
+    background-color: var(--lightBg) !important;
+    padding-bottom: 60px;
+}
