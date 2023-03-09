@@ -1,9 +1,51 @@
+@import "../../../fonts.scss";
+@import"../../../colors.scss";
+
 .publication {
     color: var(--lightColor);
+
     .text {
         text-align: center;
         font-size: xx-large;
         font-weight: bold;
         margin: 10px;
+    }
+
+    .items {
+        border: 1px solid var(--lightColor);
+        border-collapse: collapse;
+        border-spacing: 0px;
+
+        h4 {
+            padding: .25em;
+        }
+
+        .item {
+            text-align: justify;
+            text-justify: inherit;
+            padding: .5em;
+
+            #author {
+                font-size: normal;
+            }
+
+            #title {
+                font-size: large;
+                font-weight: bold;
+            }
+
+            #url {
+                a {
+                    color: var(--lightLink);
+                    text-decoration: none;
+                    @include hoverUnderline;
+
+                    &:hover {
+                        font-weight: bold;
+                        font-style: italic;
+                    }
+                }
+            }
+        }
     }
 }

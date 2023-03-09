@@ -5,10 +5,11 @@ import {
   NgModule,
   OnInit,
   AfterViewInit,
-} from '@angular/core';
-import { Lightbox } from 'ngx-lightbox';
-import { HttpClient } from '@angular/common/http';
-import { delay, Observable } from 'rxjs';
+} from "@angular/core";
+import { Lightbox } from "ngx-lightbox";
+import { HttpClient } from "@angular/common/http";
+import { delay, Observable } from "rxjs";
+import * as $ from "jquery";
 
 interface album {
   src: string;
@@ -16,9 +17,9 @@ interface album {
   thumb: string;
 }
 @Component({
-  selector: 'app-lightbox',
-  templateUrl: './lightbox.component.html',
-  styleUrls: ['./lightbox.component.scss'],
+  selector: "app-lightbox",
+  templateUrl: "./lightbox.component.html",
+  styleUrls: ["./lightbox.component.scss"],
 })
 @Injectable()
 export class LightboxComponent implements OnInit, AfterViewInit {
@@ -28,53 +29,53 @@ export class LightboxComponent implements OnInit, AfterViewInit {
   public response: any;
   ngAfterViewInit(): void {
     $(document).ready(function () {
-      var list = document.getElementsByClassName('gallery-img');
+      var list = document.getElementsByClassName("gallery-img");
       console.log(list);
     });
   }
   ngOnInit(): void {
-    const dir = '../../../assets/lightbox';
+    const dir = "../../../assets/lightbox";
     //const files = fs.readdirSync(dir);
     //console.log(files[0]);
     $(document).ready(function () {
-      $('.gallery-img').each(function (index) {
+      $(".gallery-img").each(function (index) {
         //console.log(index);
-        const value = '.gallery-img' + ':nth-child(' + index + ')';
+        const value = ".gallery-img" + ":nth-child(" + index + ")";
         const anim = [
-          'bounce',
-          'flash',
-          'pulse',
-          'rubberBand',
-          'shakeX',
-          'shakeY',
-          'headShake',
-          'swing',
-          'tada',
-          'wobble',
-          'jello',
-          'heartBeat',
-          'flip',
-          'flipInX',
-          'flipInY',
-          'hinge',
-          'jackInTheBox',
-          'rollIn',
-          'zoomIn',
-          'zoomInDown',
-          'zoomInLeft',
-          'zoomInRight',
-          'zoomInUp',
+          "bounce",
+          "flash",
+          "pulse",
+          "rubberBand",
+          "shakeX",
+          "shakeY",
+          "headShake",
+          "swing",
+          "tada",
+          "wobble",
+          "jello",
+          "heartBeat",
+          "flip",
+          "flipInX",
+          "flipInY",
+          "hinge",
+          "jackInTheBox",
+          "rollIn",
+          "zoomIn",
+          "zoomInDown",
+          "zoomInLeft",
+          "zoomInRight",
+          "zoomInUp",
         ];
         //console.log(value);
         $(value)
           .mouseenter(function () {
-            $(this).css('animation', anim[index] + ' 1s');
+            $(this).css("animation", anim[index] + " 1s");
           })
           .mouseleave(function () {
-            $(this).css('animation', '');
+            $(this).css("animation", "");
           });
         $(this).hover(function () {
-          $(this).attr('title', 'Click to view the image');
+          $(this).attr("title", "Click to view the image");
         });
       });
     });
@@ -99,18 +100,18 @@ export class LightboxComponent implements OnInit, AfterViewInit {
       this._albums.push(album);
     }
     */
-    var folder = new Array('0', '1', '2', '3', '4', '5');
+    var folder = new Array("0", "1", "2", "3", "4", "5");
     for (let i in folder) {
-      var path = '../../../assets/lightbox/' + folder[i] + '.json';
+      var path = "../../../assets/lightbox/" + folder[i] + ".json";
       //console.log(folder[i]);
       this.getJSON(path).subscribe((data) => {
         //console.log(data);
         for (let key in data) {
           //  console.log(data[key]);
-          const src = '../../../assets/lightbox/' + folder[i] + '/' + data[key];
-          const caption = ' ';
+          const src = "../../../assets/lightbox/" + folder[i] + "/" + data[key];
+          const caption = " ";
           const thumb =
-            '../../../assets/lightbox/' + folder[i] + '/' + data[key];
+            "../../../assets/lightbox/" + folder[i] + "/" + data[key];
           const album = {
             src: src,
             caption: caption,
@@ -123,6 +124,9 @@ export class LightboxComponent implements OnInit, AfterViewInit {
     }
     console.log(this._albums);
     console.log(this.albums);
+    $(document).ready(function () {
+      $(".index").hide(1000);
+    });
   }
 
   open(index: number): void {

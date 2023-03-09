@@ -6,19 +6,31 @@ $br: 5px;
 .research {
     color: var(--lightColor);
     font-family: lato;
+
     .text {
         text-align: center;
         font-size: xx-large;
         font-weight: bold;
         margin: 10px;
     }
+
     .topics {
         text-align: justify;
         text-justify: initial;
+
         .topic {
-            h6 {
+            border: 1px solid var(--lightColor);
+            border-collapse: collapse;
+            border-spacing: 0px;
+
+            h4 {
                 text-align: left;
                 font-weight: bold;
+                padding: .25em;
+            }
+
+            p {
+                padding: 0 1em 0 1em;
             }
         }
     }

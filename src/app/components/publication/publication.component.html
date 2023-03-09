@@ -1,9 +1,40 @@
 <div class="container">
     <div class="publication">
         <div class="text">Publication</div>
-        <div *ngFor="let d of data">
-            <div>
-                {{d.title}}
+        <div class="items">
+            <h4>Journal Articles</h4>
+            <div *ngFor="let d of data">
+                <div *ngIf="d.type=='article'" class="item">
+                    <span id="author">{{d.author}}, </span>
+                    <span id="title">"{{d.title}}", </span>
+                    <span id="journalDetails">{{d.journal}}, {{d.volume}}, {{d.number}}, {{d.pages}}, {{d.year}},
+                        {{d.publisher}}, </span>
+                    <span id="url"><a href={{d.url}}>{{d.url}}</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <h4>Conference Proceeding</h4>
+            <div *ngFor="let d of data">
+                <div *ngIf="d.type=='inproceedings'" class="item">
+                    <span id="author">{{d.author}}, </span>
+                    <span id="title">"{{d.title}}", </span>
+                    <span id="journalDetails">{{d.journal}}, {{d.volume}}, {{d.number}}, {{d.pages}}, {{d.year}},
+                        {{d.publisher}}, </span>
+                    <span id="url"><a href={{d.url}}>{{d.url}}</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="items">
+            <h4>Manuscript submitted or under preparation</h4>
+            <div *ngFor="let d of data">
+                <div *ngIf="d.type=='unpublished'" class="item">
+                    <span id="author">{{d.author}}, </span>
+                    <span id="title">"{{d.title}}", </span>
+                    <span id="journalDetails">{{d.journal}}, {{d.volume}}, {{d.number}}, {{d.pages}}, {{d.year}},
+                        {{d.publisher}}, </span>
+                    <span id="url"><a href={{d.url}}>{{d.url}}</a></span>
+                </div>
             </div>
         </div>
     </div>
