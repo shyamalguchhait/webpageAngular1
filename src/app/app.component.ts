@@ -71,6 +71,8 @@ export class AppComponent {
       }
     });
   }
+  // public navbarImage = "../../assets/navbar.png";
+  public navbarImage = "https://students.iiserkol.ac.in/~sg16ip022/assets/navbar.png";
 }
 function setCookie(cname: string, cvalue: string, exdate: number) {
   const d = new Date();

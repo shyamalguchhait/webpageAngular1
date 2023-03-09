@@ -6,7 +6,7 @@ import * as $ from "jquery";
   styleUrls: ["./about.component.scss"],
 })
 export class AboutComponent implements OnInit {
-  constructor() {}
+  constructor() { }
   ngOnInit(): void {
     $(document).ready(function () {
       $("#btnInfoName").click(function () {
@@ -17,6 +17,8 @@ export class AboutComponent implements OnInit {
       });
     });
   }
-  public pfImage = "../../../assets/images/pf50.png";
-  public defaultImage = "../../../assets/icons/Winter.gif";
+  // public pfImage = "../../../assets/images/pf50.png";
+  public pfImage = "https://students.iiserkol.ac.in/~sg16ip022/assets/images/pf50.png";
+  // public defaultImage = "../../../assets/icons/Winter.gif"; 
+  public defaultImage = "https://students.iiserkol.ac.in/~sg16ip022/assets/icons/Winter.gif"
 }

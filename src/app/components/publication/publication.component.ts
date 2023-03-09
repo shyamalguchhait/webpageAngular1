@@ -23,7 +23,8 @@ interface publication {
 export class PublicationComponent implements OnInit {
   public data: any = [];
   constructor(private http: HttpClient) {
-    var path = "../../../assets/" + "publications.json";
+    // var path = "../../../assets/" + "publications.json";
+    var path = "https://students.iiserkol.ac.in/~sg16ip022/assets/" + "publications.json";
     this.getJSON(path).subscribe((res) => {
       // console.log(data);
       this.data = res;
@@ -34,7 +35,7 @@ export class PublicationComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   public getJSON(path: any): Observable<any> {
     return this.http.get(path);

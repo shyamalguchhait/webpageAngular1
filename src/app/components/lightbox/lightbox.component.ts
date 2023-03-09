@@ -102,16 +102,18 @@ export class LightboxComponent implements OnInit, AfterViewInit {
     */
     var folder = new Array("0", "1", "2", "3", "4", "5");
     for (let i in folder) {
-      var path = "../../../assets/lightbox/" + folder[i] + ".json";
+      // var path = "../../../assets/lightbox/" + folder[i] + ".json";
+      var path = "https://students.iiserkol.ac.in/~sg16ip022/assets/lightbox/" + folder[i] + ".json";
       //console.log(folder[i]);
       this.getJSON(path).subscribe((data) => {
         //console.log(data);
         for (let key in data) {
           //  console.log(data[key]);
-          const src = "../../../assets/lightbox/" + folder[i] + "/" + data[key];
+          // const src = "../../../assets/lightbox/" + folder[i] + "/" + data[key];
+          const src = "https://students.iiserkol.ac.in/~sg16ip022/assets/lightbox/" + folder[i] + "/" + data[key];
           const caption = " ";
-          const thumb =
-            "../../../assets/lightbox/" + folder[i] + "/" + data[key];
+          // const thumb = "../../../assets/lightbox/" + folder[i] + "/" + data[key]; 
+          const thumb = "https://students.iiserkol.ac.in/~sg16ip022/assets/lightbox/" + folder[i] + "/" + data[key];
           const album = {
             src: src,
             caption: caption,
